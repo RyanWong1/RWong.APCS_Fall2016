@@ -31,13 +31,8 @@ public class Calculate {
 		return x;
 	}
 	
-	public static double discriminant(double a, double b, double c){ //not finished
-		return (b*b)-(4*a*c);
-	}
-	
-	public static int toImporperFrac(int par,int par2,int par3){
-		int x=(par*par3)+par2;
-		string cast()
+	public static int discriminant(int par){ //not finished
+		int x=par*par;
 		return x;
 	}
 }
