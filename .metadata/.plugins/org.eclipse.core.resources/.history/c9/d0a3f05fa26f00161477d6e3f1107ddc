@@ -1,0 +1,8 @@
+
+public class Calculate {
+
+	public static int square(int par){
+		int x=par*par;
+		return x;
+	}
+}
