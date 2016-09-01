@@ -35,9 +35,45 @@ public class Calculate {
 		return (b*b)-(4*a*c);
 	}
 	
-	public static int toImporperFrac(int par,int par2,int par3){
-		int x=(par*par3)+par2;
-		string cast()
-		return x;
+	public static String toImproperFrac(int par,int par2,int par3){
+		int x=((par*par3)+par2);
+		String str=x+"/"+par2;
+		return str;
+	}
+	
+	public static String toMixedNum(int par,int par2){
+		int x=(par/par2);
+		int y=(par%par2);
+		String str=x+"_"+y+"/"+par2;
+		return str;
+	}
+	
+	public static String foil(int a,int b,int c,int d,String var){
+		int x=(a*c);
+		int y=(a*d)+(b*c);
+		int z=(b*d);
+		String str=x+var+"^2"+y+var+z;
+		return str;
+	}
+	
+	public static boolean isDivisibleBy(int par,int par2){
+		if(par%par2==0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	public static double absValue(double par){
+		if(par<0){
+			par*=-1;
+		}
+		return par;
+	}
+	
+	public static String max(int par,int par2,int par3){
+		int x=((par*par3)+par2);
+		String str=x+"/"+par2;
+		return str;
 	}
 }
