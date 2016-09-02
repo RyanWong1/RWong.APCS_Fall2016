@@ -92,7 +92,6 @@ public class Calculate {
 		var=(var*100)+0.5;
 		var=(int)var;
 		var=(double)var;
-		var=var/100;
 		return var;	
 	}
 	
@@ -105,7 +104,7 @@ public class Calculate {
 		return par;
 	}
 	
-	public static int factorial(int par){//
+	public static int factorial(int par){
 		int total;
 		for(int i=par;i>=0;i++){
 			total=i*(i-1);
