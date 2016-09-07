@@ -106,9 +106,37 @@ public class Calculate {
 	}
 	
 	public static int factorial(int par){//
-		int total;
-		for(int i=par;i>=0;i++){
-			total=i*(i-1);
+		int total=1;
+		for(int i=par;i>0;i--){
+			if(i>1){
+				total=i*(i-1);
+			}
 		}
+		return total;
+	}
+	
+	public static boolean isPrime(int x){
+		boolean prime=false;
+		x=(int) absValue(x);
+		for(int i=2;i<x;i++){
+			if(x%i==0){
+				prime=true;
+			}
+		}
+		return prime;
+	}
+	
+	public static int gcf(int x,int y){
+		int gcf=1;
+		for(int i=1;i<=x;i++){
+			if(isDivisibleBy(x,i) && isDivisibleBy(y,i)){
+				gcf=i;
+			}
+		}
+		return gcf;
+	}
+	
+	public static double sqrt(double x){
+		
 	}
 }
