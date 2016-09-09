@@ -1,7 +1,0 @@
-
-public class Calculate {
-
-	public static int square(int par){
-		return par*par;
-	}
-}
