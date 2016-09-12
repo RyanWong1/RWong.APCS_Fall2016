@@ -138,9 +138,9 @@ public class Calculate {
 	
 	public static double sqrt(double x){
 		double y=0;
-		double sqrt=y/2;
+		double sqrt=x/2;
 		do{
-			y=sqrt;
+			x=sqrt;
 			sqrt=(y+(x/y))/2;
 		}while(x-sqrt!=0);
 		return sqrt;

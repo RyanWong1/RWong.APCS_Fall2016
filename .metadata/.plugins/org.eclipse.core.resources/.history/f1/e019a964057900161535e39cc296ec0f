@@ -137,12 +137,10 @@ public class Calculate {
 	}
 	
 	public static double sqrt(double x){
-		double y=0;
-		double sqrt=y/2;
-		do{
-			y=sqrt;
-			sqrt=(y+(x/y))/2;
-		}while(x-sqrt!=0);
+		double sqrt=1;
+		for(int i=1;i*i==x;i+=0.01){
+			sqrt=i;
+		}
 		return sqrt;
 	}
 }
