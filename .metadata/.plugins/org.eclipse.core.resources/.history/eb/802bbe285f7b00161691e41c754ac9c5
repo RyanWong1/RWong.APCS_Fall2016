@@ -138,7 +138,7 @@ public class Calculate {
 	
 	public static double sqrt(double x){
 		double y=0;
-		double sqrt=x/2;
+		double sqrt=y/2;
 		do{
 			y=sqrt;
 			sqrt=(y+(x/y))/2.0;
