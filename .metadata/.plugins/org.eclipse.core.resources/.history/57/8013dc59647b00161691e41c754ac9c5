@@ -98,11 +98,10 @@ public class Calculate {
 	}
 	
 	public static double exponent(double par,int x){
-		double total=1;
-		int counter=x;
+		int count=x;
 		while(x>=0){
-			total=par*par;
-			counter--;
+			par*=par;
+			count --;
 		}
 		return par;
 	}

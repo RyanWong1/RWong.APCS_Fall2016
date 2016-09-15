@@ -1,4 +1,3 @@
-//sfdgfghhjjkliouytrewqaszxcvbnmk,lkopiuytrewqasdfg
 
 public class Calculate {
 
@@ -98,19 +97,20 @@ public class Calculate {
 	}
 	
 	public static double exponent(double par,int x){
-		double total=1;
-		int counter=x;
+		int count=x;
 		while(x>=0){
-			total=par*par;
-			counter--;
+			par*=par;
+			count --;
 		}
 		return par;
 	}
 	
-	public static int factorial(int par){
+	public static int factorial(int par){//
 		int total=1;
 		for(int i=par;i>0;i--){
-			total*=i;
+			if(i>1){
+				total=i*(i-1);
+			}
 		}
 		return total;
 	}
