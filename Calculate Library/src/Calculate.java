@@ -97,10 +97,10 @@ public class Calculate {
 	}
 	
 	public static double exponent(double par,int x){
-		int counter=x;
+		int count=x;
 		while(x>=0){
 			par*=par;
-			counter--;
+			count --;
 		}
 		return par;
 	}
@@ -116,11 +116,11 @@ public class Calculate {
 	}
 	
 	public static boolean isPrime(int x){
-		boolean prime=false;
+		boolean prime=true;
 		x=(int) absValue(x);
 		for(int i=2;i<x;i++){
 			if(x%i==0){
-				prime=true;
+				prime=false;
 			}
 		}
 		return prime;
@@ -141,8 +141,8 @@ public class Calculate {
 		double sqrt=y/2;
 		do{
 			y=sqrt;
-			sqrt=(y+(x/y))/2;
-		}while(x-sqrt!=0);
+			sqrt=(y+(x/y))/2.0;
+		}while(y-sqrt!=0);
 		return sqrt;
 	}
 }
