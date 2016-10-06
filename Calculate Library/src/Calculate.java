@@ -53,7 +53,7 @@ public class Calculate {
 		int x=(a*c);
 		int y=(a*d)+(b*c);
 		int z=(b*d);
-		String str=x+var+"^2"+y+var+z;
+		String str=x+var+"^2+"+y+var+"+"+z;
 		return str;
 	}
 	
