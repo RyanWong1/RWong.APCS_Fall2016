@@ -5,8 +5,7 @@ public class Split
 	public static void main(String[] args) 
 	{
 		String jfk="I really like really red apples!";
-		String s=jfk.split("really");
-		System.out.println(jfk);
+		System.out.println(jfk.split(" "));
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
 		//Where sp is the string where the string splits
