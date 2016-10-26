@@ -1,0 +1,41 @@
+
+public class Hourglass {
+
+	public static void main(String[] args) {
+		printBase(); //Print the firstline
+		topHalf();
+		System.out.println("||");
+		//bottomHalf();
+		printBase();//Print the top half
+
+
+
+		}
+
+		public static void topHalf(){
+			int counter;
+			for (int i=1; i <=4; i++){//print each line
+			//print spaces
+				counter=5-i;
+				for (int j=1; j<=i; j++){
+					System.out.print(" ");
+				}
+				System.out.print("\\");
+				while (counter>0) { 
+					System.out.print("::");
+					counter--;
+				}
+				System.out.println("/");
+			}
+		}
+
+		public static void printBase(){
+			System.out.print("|");
+			for (int i = 1; i<=10;i++){
+				System.out.print("\"");
+			}
+			System.out.println("|");
+		}
+		
+
+}
