@@ -5,7 +5,9 @@ public class Split
 	public static void main(String[] args) 
 	{
 		String jfk="I really like really red apples!";
-		System.out.println(jfk.split("really"));
+		String[] s=jfk.split("really");
+		//System.out.println(s);
+		sandwich("applespineapplesbreadlettustomatobaconmayohambreadcheese");
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
 		//Where sp is the string where the string splits
@@ -34,9 +36,9 @@ public class Split
 		
 
 	}
-	public static String split(String text){
-		text.split("bread");
-		
+	public static void sandwich(String text){
+		String[] sandwich=text.split("bread");
+		System.out.println(sandwich[1]);
 	}
 
 }
