@@ -35,18 +35,16 @@ public class FracCalc {
     }
     
     public static String parseInput(String expression){
-    	return "";
+    	
     }
     
     public
     
-    public static int[] parseOperands(String wholeNumber, String denominator, String numerator){
+    public static int[] parseOperands(String denominator,String numerator){
     	
     	int[]={}
-    	return "";
+    	return 
     }
-    
-    public static 
 
     // TODO: Fill in the space below with any helper methods that you think you will need
     
