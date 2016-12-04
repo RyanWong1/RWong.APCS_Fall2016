@@ -46,7 +46,10 @@ public class FracCalc {
     	return "";
     }
     
-    public static 
+    public static String toImproperFrac(String fraction){
+    	
+    	return "";
+    }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
     
