@@ -56,6 +56,7 @@ public class FracCalc {
         }else if(tokens[1].equals("/")){
         	answer=division(operand1,operand2);
         }
+        answer=simplify(answer);
         return formatAnswer(answer);
     }
     
@@ -134,8 +135,42 @@ public class FracCalc {
     }
     
     public static String formatAnswer(int[] answer){
-    	return answer[0]+"/"+answer[1];
+    	if(answer[1]==0){
+    		return answer[0]+"";
+    	}else{
+    		if(answer[0]==0){
+    			if(answer[2]==1){
+    				return answer[1]+"";
+    			}else{
+	    			return answer[1]+"/"+answer[2];
+    			}
+	    	}else{
+	    		return answer[0]+"_"+answer[1]+"/"+answer[2];
+	    	}
+    	}
     }
-    // TODO: Fill in the space below with any helper methods that you think you will need
+    
+    public static int[] simplify(int[] answer){
+    	int gcf=1;
+    	int[] simplified=new int[3];
+    	if(answer[0]>=answer[1]){
+    		simplified[0]=answer[0]/answer[1];
+    		simplified[1]=answer[0]%answer[1];
+    	}else{
+    		simplified[0]=0;
+    		simplified[1]=answer[0];
+    	}
+    	simplified[2]=answer[1];
+    	for(int i=1;i<=simplified[1];i++){
+    		if(simplified[1]%i==0 && simplified[2]%i==0){
+    			gcf=i;
+    		}
+    	}
+    	simplified[1]/=gcf;
+    	simplified[2]/=gcf;
+    	return simplified;
+    }
+    	
+    
     
 }
