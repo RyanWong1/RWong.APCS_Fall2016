@@ -114,19 +114,11 @@ public class FracCalc {
     }
     
     public static int[] multiplication(int[] operand1,int[] operand2){
-    	if(operand1[0]<0 && operand2[0]<0){
-    		operand1[0]*=-1;
-    		operand2[0]*=-1;
-    	}
     	int[] product={operand1[0]*operand2[0],operand1[1]*operand2[1]};
     	return product;
     }
     
     public static int[] division(int[] operand1,int[] operand2){
-    	if(operand1[0]<0 && operand2[0]<0){
-    		operand1[0]*=-1;
-    		operand2[0]*=-1;
-    	}
     	int[] quotient={operand1[0]*operand2[1],operand1[1]*operand2[0]};
     	return quotient;
     }
@@ -161,7 +153,7 @@ public class FracCalc {
     public static int[] simplify(int[] answer){
     	int gcf=1;
     	int[] simplified=new int[3];
-    	if(answer[0]<0){            
+    	if(answer[0]<0){
     		answer[0]*=-1;
 	    	if(answer[0]>=answer[1]){
 	    		simplified[0]=answer[0]/answer[1];

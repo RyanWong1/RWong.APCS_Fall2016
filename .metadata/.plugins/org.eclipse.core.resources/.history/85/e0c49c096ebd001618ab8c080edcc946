@@ -161,7 +161,7 @@ public class FracCalc {
     public static int[] simplify(int[] answer){
     	int gcf=1;
     	int[] simplified=new int[3];
-    	if(answer[0]<0){            
+    	if(answer[0]<0){
     		answer[0]*=-1;
 	    	if(answer[0]>=answer[1]){
 	    		simplified[0]=answer[0]/answer[1];
