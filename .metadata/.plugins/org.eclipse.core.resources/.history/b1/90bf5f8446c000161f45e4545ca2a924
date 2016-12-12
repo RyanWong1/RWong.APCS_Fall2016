@@ -1,14 +1,8 @@
-//Ryan Wong
-//12/11/16
-//apcs 2nd period
-//Fraction Calculator
-
 package fracCalc;
 import java.util.*;
 
 public class FracCalc {
 
-	//Receives input from the user and complete the goal of the code
     public static void main(String[] args) 
     {
     	String equation;
@@ -34,8 +28,6 @@ public class FracCalc {
     //        
     // The function should return the result of the fraction after it has been calculated
     //      e.g. return ==> "1_1/4"
-    
-    //To call on different methods to assist on getting the answer
     public static String produceAnswer(String input)
     { 
         // TODO: Implement this function to produce the solution to the input
@@ -68,13 +60,11 @@ public class FracCalc {
         return formatAnswer(answer);
     }
     
-    //Split the input into two and returns the expression split by the spaces
     public static String[] parseInput(String expression){
     	String[] strArray=expression.split(" ");
     	return strArray;
     }
     
-    //Changes the whole number, numerator, and the denominator as integer.
     public static int[] parseOperand(String operand){
     	String[] strArray=operand.split("_");
     	int[] intArray=new int[3];
@@ -97,8 +87,6 @@ public class FracCalc {
     	return intArray;
     }
     
-    
-    //Return the fraction as a improper fraction
     public static int[] toImproperFrac(int[] operand){
     	int[] improper=new int[2];
     	if(operand[0]<0){
@@ -109,7 +97,6 @@ public class FracCalc {
     	return improper;
     }
     
-    //Subtract the fractions and returns the fractions as a int
     public static int[] subtraction(int[] operand1,int[] operand2){
     	int cd=getCD(operand1,operand2);
     	operand1=convertToCD(operand1,cd);
@@ -118,7 +105,6 @@ public class FracCalc {
     	return difference;
     }
     
-    //Add the fraction and return the sum
     public static int[] addition(int[] operand1,int[] operand2){
     	int cd=getCD(operand1,operand2);
     	operand1=convertToCD(operand1,cd);
@@ -127,7 +113,6 @@ public class FracCalc {
     	return sum;
     }
     
-    //Receives fractions and multiplies the two output together
     public static int[] multiplication(int[] operand1,int[] operand2){
     	if(operand1[0]<0 && operand2[0]<0){
     		operand1[0]*=-1;
@@ -137,7 +122,6 @@ public class FracCalc {
     	return product;
     }
     
-    //Divide with each other by finding gcf
     public static int[] division(int[] operand1,int[] operand2){
     	if(operand1[0]<0 && operand2[0]<0){
     		operand1[0]*=-1;
@@ -154,12 +138,10 @@ public class FracCalc {
     	return operand;
     }
     
-    //Get the common denominator
     public static int getCD(int[] operand1, int[] operand2){
     	return operand1[1]*operand2[1];
     }
     
-    //Turns the array into a string
     public static String formatAnswer(int[] answer){
     	if(answer[1]==0){
     		return answer[0]+"";
@@ -176,7 +158,6 @@ public class FracCalc {
     	}
     }
     
-    //Simplify the fraction
     public static int[] simplify(int[] answer){
     	int gcf=1;
     	int[] simplified=new int[3];

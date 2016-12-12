@@ -1,7 +1,5 @@
 //Ryan Wong
 //12/11/16
-//apcs 2nd period
-//Fraction Calculator
 
 package fracCalc;
 import java.util.*;
