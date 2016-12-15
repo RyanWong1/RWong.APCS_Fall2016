@@ -32,7 +32,17 @@ public class ArraysLab3
 	public static int[] append(int[] arr, int num)
 	{
 		assert (arr.length > 0);
-		
+		int length=arr.length;
+		int [] array = new int[length];
+		for(int i =0; i<length;i++){
+			if(i == length){
+				array[length] = num;
+			}
+			else{
+				array[i] = arr[i];
+			}
+		}
+		return array;
 	}
 	
 	/*
